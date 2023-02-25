@@ -1,0 +1,11 @@
+version: "3.0"
+
+- rule: Good bye
+  steps:
+  - intent: goodbye
+  - action: action_goodbye
+
+- rule: I am a bot
+  steps:
+  - intent: bot_challenge
+  - action: action_i_am_a_bot

@@ -1,0 +1,46 @@
+version: "3.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: mood_great
+  - action: action_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: mood_unhappy
+  - action: action_cheer_up
+  - action: action_did_that_help
+  - intent: affirm
+  - action: action_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: mood_unhappy
+  - action: action_cheer_up
+  - action: action_did_that_help
+  - intent: deny
+  - action: action_goodbye
+
+- story: About
+  steps:
+  - intent: about
+  - action: action_about
+  - action: action_did_that_help
+  - intent: affirm
+  - action: action_happy
+
+- story: Available jobs
+  steps:
+  - intent: get_job
+  - action: action_get_job
+  - action: action_did_that_help
+  - intent: affirm
+  - action: action_happy
